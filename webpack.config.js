@@ -17,7 +17,21 @@ exports.default = {
     module: {
         rules: [
             {
-                test: /\.(png|jpe?g|webp|gif|svg|mp3|mp4)$/i,
+                test: /\.(png|jpe?g|webp|gif|svg)$/i,
+                use: [
+                    {
+                        loader: 'img-optimize-loader',
+                        options: {
+                            name: '[path][name].[ext]',
+                            compress: {
+                                mode: 'high',
+                            }
+                        }
+                    },
+                ],
+            },
+            {
+                test: /\.(mp3|mp4)$/i,
                 loader: 'file-loader',
                 options: {
                     name: '[path][name].[ext]'
