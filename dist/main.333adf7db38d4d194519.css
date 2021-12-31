@@ -1,3 +1,6 @@
+/*!***********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./styles/main.scss ***!
+  \***********************************************************************************************************/
 .main_heading {
   color: red;
   text-align: center;
@@ -15,7 +18,6 @@
   box-sizing: border-box;
   min-width: 350px;
   height: 400px;
-
 }
 
 .card img {
@@ -40,29 +42,26 @@ video {
   .card {
     min-width: 300px;
     height: 350px;
-
   }
 }
-
 @media screen and (max-width: 768px) {
   .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+
   .card {
     min-width: 250px;
     height: 300px;
-
   }
 }
-
 @media screen and (max-width: 576px) {
   .gallery {
     grid-template-columns: 1fr;
   }
+
   .card {
     width: 100%;
     height: 400px;
-
   }
 }
