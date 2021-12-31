@@ -16,6 +16,13 @@ exports.default = {
     },
     module: {
         rules: [
+            {
+                test: /\.(png|jpe?g|webp|gif|svg|mp3|mp4)$/i,
+                loader: 'file-loader',
+                options: {
+                    name: '[path][name].[ext]'
+                }
+            },
 
             {
                 test: /\.s[ac]ss$/i,
